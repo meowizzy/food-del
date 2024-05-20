@@ -1,0 +1,88 @@
+.wrapper.isLoading {
+    opacity: .5;
+    pointer-events: none;
+}
+.tables {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+}
+
+.bookingCols {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.bookingCol {
+    margin-right: 20px;
+}
+
+.bookingCol:last-child {
+    margin-right: 0;
+}
+
+.bookingSubmit {
+    margin-top: 20px;
+}
+
+.table {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    color: #FF4C24;
+    box-shadow: inset 0 0 0 2px #FF4C24;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.table:hover {
+    background-color: #f87051;
+    color: #fff;
+}
+
+.table.selected {
+    background-color: #FF4C24;
+    color: #fff;
+    pointer-events: none;
+}
+
+.table:disabled {
+    opacity: .3;
+    pointer-events: none;
+    background-color: #FF4C24;
+    color: #fff;
+}
+
+.bookingTitle {
+    margin-bottom: 5px;
+}
+
+.bookingRow {
+    margin-bottom: 20px;
+}
+
+.errors {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.errors li {
+    color: red;
+}
+
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bookingColDesc {
+    max-width: 500px;
+    line-height: 25px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}

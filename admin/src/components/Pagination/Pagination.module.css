@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.pagination li {
+}
+
+.pagination li button {
+    border: 1px solid tomato;
+    background-color: transparent;
+    min-width: 24px;
+    line-height: 24px;
+    cursor: pointer; 
+    transition: .3s;
+}
+
+.pagination li button:hover, .pagination li button.active {
+    background-color: tomato;
+    color: #fff;
+}
+
+.pagination li button.active {
+    pointer-events: none;
+}

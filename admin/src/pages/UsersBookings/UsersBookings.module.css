@@ -1,0 +1,150 @@
+.bookingsInfo {
+    list-style: none;
+    padding: 0;
+}
+
+.bookingList {
+    margin: 15px 0;
+}
+
+.bookingRow {
+    padding: 20px;
+    border: 1px solid tomato;
+    display: flex;
+    align-items: stretch;
+    margin: 0 -10px 20px;
+}
+
+.bookingColumnLeft, .bookingColumnRight {
+    width: calc(50% - 10px);
+    margin: 0 10px;
+}
+
+.bookingsInfo {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.bookingsInfo select {
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    width: max(10vw, 120px);
+    padding: 10px;
+    outline: none;
+}
+
+.bookingsInfo .value {
+    background-color: tomato;
+    color: #fff;
+    padding: 4px;
+}
+
+.bookingProduct {
+    margin-bottom: 10px;
+    border: 1px solid tomato;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.bookingProduct .label {
+
+}
+
+.bookingProduct .value {
+    font-weight: 700;
+}
+
+.bookingPic {
+    width: 60px;
+    height: 60px;
+}
+
+.bookingPic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bookingName, .bookingPrice, .productQuantity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.select {
+    display: inline-block;
+    position: relative;
+}
+
+.select:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    border: 2px solid tomato;
+    border-bottom: 2px solid transparent;
+    display: none;
+    animation: rotating 1s linear infinite;
+}
+
+.select.loading:before {
+    display: block;
+}
+
+.empty {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -44px;
+}
+
+.title svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+
+.delete {
+    border: 0;
+    background-color: tomato;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.delete:hover {
+    background-color: rgb(255, 140, 120);
+}
+
+@keyframes rotating {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}

@@ -1,0 +1,9 @@
+.buttonsWrapper {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.logoutBtn {
+    margin-right: 10px;
+}
