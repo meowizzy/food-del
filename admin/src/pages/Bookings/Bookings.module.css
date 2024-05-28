@@ -1,0 +1,52 @@
+.bookings_list {
+    margin: 15px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.bookings_list li {
+    margin-bottom: 20px;
+    border: 1px solid tomato;
+    padding: 15px;
+}
+
+.row {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.row .label {
+
+}
+
+.row .value {
+    font-weight: 700;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: tomato;
+    color: #fff;
+    transition: .3s;
+}
+
+.link svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.link:hover {
+    background-color: rgb(250, 130, 109);
+}
+
+
+.empty {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

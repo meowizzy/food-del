@@ -1,0 +1,54 @@
+.list-table-format{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 13px;
+    position: relative;
+}
+.list-table-format.title{
+    background-color: #f9f9f9;
+}
+.list-table-format img{
+    width: 50px;
+}
+@media(max-width:600px){
+
+    .list-table-format{
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 15px;
+    }
+    .list-table-format.title{
+        display: none;
+    }
+}
+
+.pic {
+    width: 50px;
+    height: 50px;
+    background-color: lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pic image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit {
+    background-color: tomato;
+    color: #fff;
+    border-radius: 6px;
+    border: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.edit:hover {
+    background-color: rgb(255, 159, 143);
+}

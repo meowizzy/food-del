@@ -1,0 +1,80 @@
+import { useState, useEffect } from 'react';
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { assets, url } from '../../assets/assets';
+import cls from "./Bookings.module.css";
+import cn from "classnames";
+
+
+export const Bookings = () => {
+    const [data, setData] = useState(undefined);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(undefined);
+
+    const fetchBookings = async () => {
+        try {
+            setIsLoading(true);
+            const response = await axios.get(`${url}/api/booking/withBookings`);
+            
+            setData(response.data.data);
+
+            setIsLoading(false);
+        } catch(e) {
+            setError(e.message);
+        }
+    };
+
+    useEffect(() => {
+        fetchBookings();
+    }, []);
+
+    if (isLoading) {
+        return (
+            <div className="bookings add">
+                <h3>Loading...</h3>
+            </div>
+        );
+    }
+
+    if (!data || !data?.length) {
+        return (
+            <div className="bookings add">
+                <h3>Bookings page</h3>
+                <div className={cls.empty}>No data</div>
+            </div>    
+        );
+    }
+
+    return (
+        <div className="bookings add">
+            <h3>Bookings page</h3>
+            <ul className={cls.bookings_list}>
+                {
+                    data?.map(item => {
+                        return (
+                            <li key={item.id}>
+                                <div className={cls.row}>
+                                    <span className={cls.label}>Email: </span>
+                                    <span className={cls.value}>{item.email}</span>
+                                </div>
+                                <div className={cls.row}>
+                                    <span className={cls.label}>Name: </span>
+                                    <span className={cls.value}>{item.name}</span>
+                                </div>
+                                <Link to={`/bookings/${item.id}`} className={cls.link}>
+                                    <span>View details</span>
+                                    <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
+                                        viewBox="0 0 330 330" xmlSpace="preserve">
+                                    <path id="XMLID_27_" d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255
+                                        s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0
+                                        c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"/>
+                                    </svg>
+                                </Link>
+                            </li>
+                        )
+                    })
+                }
+            </ul>
+        </div>
+    );
+};

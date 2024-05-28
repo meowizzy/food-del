@@ -1,0 +1,49 @@
+.formWrapper {
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-width: 500px;
+}
+
+.formField {
+    margin-bottom: 10px;
+}
+
+.formField:last-child {
+    margin-bottom: 0;
+}
+
+.formField label {
+    display: flex;
+    flex-direction: column;
+}
+
+.formField label input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #C5C5C5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+
+.formFieldLabel {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.cancelBtn {
+    background-color: transparent;
+    color: #FF4C24;
+    color: #FF4C24;
+    box-shadow: inset 0 0 0 2px #FF4C24;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.cancelBtn:hover {
+    background-color: #FF4C24;
+    color: #fff;
+}

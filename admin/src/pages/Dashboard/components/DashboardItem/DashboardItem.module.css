@@ -1,0 +1,60 @@
+.item {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.itemHead {
+    padding: 15px;
+    background-color: tomato;
+    color: #fff;
+    font-size: 20px;
+}
+
+.itemBody {
+    min-height: 200px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.itemBody:hover {
+    background-color: rgba(0,0,0,.03);
+}
+
+.count {
+    font-size: 60px;
+    color: tomato;
+    font-weight: 700;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 6px solid tomato;
+    display: block;
+    border-bottom: 6px solid transparent;
+    animation: rotating 1s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,77 @@
+.bookings {
+    margin: 20px 0 50px;
+}
+
+.bookingItem {
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+}
+
+.bookingItem:last-child {
+    margin-bottom: 0;
+}
+
+.bookingInfo {
+    list-style: none;
+    
+}
+
+.bookingInfo li {
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.bookingInfo li:last-child {
+    margin-bottom: 0;
+}
+
+.bookingInfo li .label {
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.bookingInfo li .value {
+    display: inline-block;
+    padding: 3px;
+    background-color: tomato;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.bookingFoodsItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid tomato;
+    margin-bottom: 20px;
+}
+
+.bookingFoodsItemPic {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    margin-right: 20px;
+}
+
+.bookingFoodsItemName, .bookingFoodsItemPrice {
+    margin-right: 100px;
+}
+
+.bookingFoodsItemValue {
+    font-weight: 700;
+}
+
+.bookingFoodsItemPic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bookingFoodsItemStatus {
+    margin-left: 100px;
+}
