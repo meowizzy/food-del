@@ -110,9 +110,8 @@ export const deleteCategory = async (req, res) => {
 };
 
 export const updateCategory = async (req, res) => {
-    console.log(req);
     try {
-        if (!req.body.id && !req.body.name) {
+        if (!req.params.id && !req.body.name) {
             throw new Error("Incorrect data!");
         }
         await findByIdAndUpdateTotalItems();
@@ -120,7 +119,8 @@ export const updateCategory = async (req, res) => {
             name: req.body.name,
             ...(req.file ? { image: req.file.filename } : {})
         }
-        const category = await categoriesModel.findByIdAndUpdate(req.body.id, data);
+        console.log("CATEGORY UPDATE DATA++++++++++", data);
+        const category = await categoriesModel.findByIdAndUpdate(req.params.id, data);
 
         res.json({ success: true, category });
     } catch(error) {

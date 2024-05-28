@@ -21,6 +21,6 @@ categoriesRoute.get("/list/:id", getCategoryById);
 categoriesRoute.get("/pageable-list", getPageableCategories);
 categoriesRoute.get("/all", getAllCategories);
 categoriesRoute.delete("/list/:id", deleteCategory);
-categoriesRoute.put("/update", upload.single('image'), updateCategory);
+categoriesRoute.put("/list/:id", upload.single('image'), updateCategory);
 
 export default categoriesRoute;
